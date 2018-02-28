@@ -10,14 +10,14 @@ def evaluate():
 
 	for i in exp:
 		if i == "+" or i == "-":
-			exp_stack.append(i)
+			op_stack.append(i)
 		else:
 			num_stack.append(int(i))
 
 	while num_stack:
 		# evaluates addition/subtraction of two numbers
 		if op_stack:
-			operator = exp_stack.pop()
+			operator = op_stack.pop()
 			num2 = num_stack.pop()
 			num1 = num_stack.pop()
 
